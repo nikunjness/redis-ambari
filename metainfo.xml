@@ -6,7 +6,7 @@
         	<!-- Internal name for service (must be unique) -->
             <name>REDIS</name>
             <!-- display name in Ambari UI -->
-            <displayName>redis</displayName>
+            <displayName>Redis</displayName>
             <!-- Description of service - will be displayed when user clicks add service -->
             <comment>Redis is an open source, BSD licensed, advanced key-value cache and store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets, sorted sets, bitmaps and hyperloglogs.</comment>
             <!-- Version of component-->
@@ -15,7 +15,7 @@
             	<!-- In this case, there is only one master component -->
                 <component>
                   <name>REDIS</name>
-                  <displayName>redis</displayName>
+                  <displayName>Redis</displayName>
                   <category>MASTER</category>
                   <!-- how many of these components are allowed in a cluster -->
                   <cardinality>1</cardinality>
