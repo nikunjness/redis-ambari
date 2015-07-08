@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<metainfo>
+    <schemaVersion>2.0</schemaVersion>
+    <services>
+        <service>
+        	<!-- Internal name for service (must be unique) -->
+            <name>REDIS</name>
+            <!-- display name in Ambari UI -->
+            <displayName>redis</displayName>
+            <!-- Description of service - will be displayed when user clicks add service -->
+            <comment>Redis is an open source, BSD licensed, advanced key-value cache and store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets, sorted sets, bitmaps and hyperloglogs.</comment>
+            <!-- Version of component-->
+            <version>2.4.10</version>
+            <components>
+            	<!-- In this case, there is only one master component -->
+                <component>
+                  <name>REDIS</name>
+                  <displayName>redis</displayName>
+                  <category>MASTER</category>
+                  <!-- how many of these components are allowed in a cluster -->
+                  <cardinality>1</cardinality>
+                  <!-- reference to (and details of) what script is to be used to install/stop/start/config the service -->
+                  <commandScript>
+                    <script>scripts/master.py</script>
+                    <scriptType>PYTHON</scriptType>
+                    <timeout>5000</timeout>
+                  </commandScript>
+                </component>
+            </components>
+            <!-- what yum packages need to be installed -->
+            <osSpecifics>
+              <osSpecific>
+                <osFamily>redhat6</osFamily>
+                <packages>
+                   <package><name>redis</name></package>
+                </packages>
+              </osSpecific>
+            </osSpecifics>
+            <!-- names for config files (under configuration dir) -->
+      	    <configuration-dependencies>
+        	<config-type>redis-config</config-type>
+      	    </configuration-dependencies>
+            <restartRequiredAfterChange>false</restartRequiredAfterChange>
+        </service>
+    </services>
+</metainfo>

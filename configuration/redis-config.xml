@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+
+  <!-- Define configuration paramaters for service: property name, default value and description (shown as help text) -->
+
+  <!-- service log file -->
+  <property>
+    <name>redis.log</name>
+    <value>/var/log/redis.log</value>
+    <description>Log file for redis service</description>
+  </property> 
+
+</configuration>
