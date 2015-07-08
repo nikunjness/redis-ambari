@@ -53,7 +53,7 @@ On bottom left -> Actions -> Add service -> check Redis -> Next -> Next -> Next 
 
 ```
 # cat /var/log/redis.log
-Starting ntpd: [  OK  ]
+Starting redis: [  OK  ]
 ```
 
 - Check status of Redis 
@@ -97,3 +97,9 @@ curl -u admin:$PASSWORD -i -H 'X-Requested-By: ambari' -X PUT -d '{"RequestInfo"
     ```
     service ambari restart
     ```
+    
+###References:
+https://github.com/abajwa-hw/ntpd-stack
+
+
+    
